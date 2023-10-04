@@ -1064,6 +1064,24 @@ ul {
   position: relative;
   transition: 1s;
   top: 100px;
+  z-index: 2;
+  
+}
+
+.pricing-item:after{
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 0;
+  background: #3b54d2;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.pricing-item:hover:after{
+  height: 100%;
 }
 
 .pricing-item.mg {
@@ -1210,6 +1228,22 @@ ul {
 
 .pricing-item:hover {
   top: 50px;
+}
+
+.pricing-item:hover .pricing-item-title,
+.pricing-item:hover .pricing-item-line,
+.pricing-item:hover .pricing-item-value p,
+.pricing-item:hover .pricing-item-info li{
+  color:#fff;
+}
+
+.pricing-item:hover .price-per-month{
+  background: #797de7;
+}
+
+.btn-pricing-order:hover {
+  border:1px solid #eee;
+  
 }
 /* blog-section */
 
